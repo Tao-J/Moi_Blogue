@@ -1,32 +1,63 @@
-<!DOCTYPE html>
+<!doctype html>
 <html>
-<head>
-  <meta http-equiv="content-type" content="text/html; charset=utf-8" />
-  <title> {% if page.title %} {{ page.title }} | {% endif %} Tao J, Coding ape.... </title>
-  <!--<link rel="stylesheet" href="/css/styles.css" />-->
-</head>
-<body>
- 
-  <div id="main">
- 
+
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <title> {% if page.title %} {{ page.title }} | {% endif %} Moi Blog, Coding ape.... </title>
+    <link rel="stylesheet" href="stylesheets/styles.css">
+    <link rel="stylesheet" href="stylesheets/pygment_trac.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+    <script src="javascripts/main.js"></script>
+    <!--[if lt IE 9]>
+      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+  </head>
+
+  <body>
     <header>
-      <h1> Moi_Blog </h1>
-    <header>
- 
-    <nav role="navigation">
-      <ul>
-        <li><a href="/">Page d'accueil </a></li>
-        <li><a href="/about">About</a></li>
-        <li><a href="/contact">Contact</a></li>
-      </ul>
-    </nav>
- 
-    {{ content }}
- 
-    <footer>
-      <p>@Tao J 2013 | All Rights Reserved. </p>
-    </footer>
- 
-  </div>
-</body>
+      <h1>Moi Blog</h1>
+      <p>C&#39;est moi Blog ----- T&amp;Moi</p>
+    </header>
+
+    <div id="banner">
+      <span id="logo"></span>
+
+      <a href="https://dtopn.github.com/moi_Blog" class="button fork"><strong>Page d'accueil</strong></a>
+
+      <div class="downloads"> <!-- TODO: -->
+        <span>Section:</span>
+        <ul>
+          <li><a href="/" class="button">Artics</a></li>
+          <li><a href="/portfolio" class="button">Portilio</a></li>
+          <li><a href="/about" class="button">About</a></li>
+        </ul>
+      </div>
+    </div><!-- end banner -->
+
+    <div class="wrapper">
+
+      <nav role="navigation">
+        <ul>
+          <li><a href="/">Page d'accueil</a></li>
+          <li><a href="/about">About</a></li>
+          <li><a href="/contact">Contact</a></li>
+        </ul>
+      </nav>
+
+      <section>
+
+      {{ content }}
+      
+      </section>
+      <footer>
+        <p>Blog maintained by <a href="https://github.com/dtopn">Tao J</a></p>
+        <p><small>Hosted on GitHub Pages &mdash; Theme by <a href="https://twitter.com/michigangraham">mattgraham</a></small></p>
+      </footer>
+
+    </div>
+    <!--[if !IE]><script>fixScale(document);</script><![endif]-->
+    
+  </body>
 </html>

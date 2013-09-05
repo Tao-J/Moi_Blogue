@@ -13,7 +13,7 @@ title: Articles
   {% for post in site.posts %}
  
   <li>
-    <a href="/moi_Blog""{{ post.url }}">
+    <a href="{% if post.title %} /moi_Blog{{ post.url }} {% endif %}">
       <!-- <img src="{{ post.image }}" /> -->
       <h3>{{ post.title }}</h3>
     </a>

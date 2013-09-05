@@ -1,5 +1,5 @@
 ---
-layout: articles 
+layout: post 
 title: I am born
 ---
 

@@ -1,5 +1,5 @@
 ---
-layout: articles
+layout: default
 title: Articles
 ---
 
@@ -11,13 +11,11 @@ title: Articles
  
 <ul class="entries">
   {% for post in site.posts %}
- 
   <li>
-    <a href="{% if post.title %} /moi_Blog{{ post.url }} {% endif %}">
-      <!-- <img src="{{ post.image }}" /> -->
+    <a href="{% if post.title %} {{ site.baseurl}}{{ post.url }} {% endif %}">
+       <img src="{{ post.image }}" /> 
       <h3>{{ post.title }}</h3>
     </a>
   </li>
-  <br></br>
   {% endfor %}
 </ul>

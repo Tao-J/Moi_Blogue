@@ -3,13 +3,14 @@ layout: default
 title: Home
 ---
 
+<h2>Frontmatter</h2>
 <div class="wrapper">
 <ul class="entries">
   {% for post in site.posts %}
   {% if post.low != 'low' %}
     <li>
       <a href="{% if post.title %} {{ site.baseurl}}{{ post.url }} {% endif %}">
-         <img src="{{ post.image }}" /> 
+         <img src="{{ post.image }}" />
         <h3>{{ post.title }}</h3>
         <p>{{ post.title_real }}</p>
       </a>
@@ -17,18 +18,38 @@ title: Home
   {% endif %}
   {% endfor %}
 </ul>
-https://itunes.apple.com/jp/album/orenji/id962223616?i=962223617
-https://itunes.apple.com/us/album/chasing-cars/id152267527?i=152267584
-    <section>
-        Oh..La~
-    </section>
+</div>
+
+<hr>
+
+<div class="wrapper">
+<h2>Network, Embedded device, and Hardware development</h2>
+<ul class="entries">
+  {% for post in site.posts %}
+  {% if post.low == 'low' %}
+    <li>
+      <a href="{% if post.title %} {{ site.baseurl }}{{ post.url }} {% endif %}">
+         <img src="{{ post.image }}" />
+        <h3>{{ post.title }}</h3>
+        <p>{{ post.title_real }}</p>
+      </a>
+    </li>
+  {% endif %}
+  {% endfor %}
+</ul>
+</div>
+
+<hr>
+<div class="wrapper">
+<section>
+    Oh..La~
+</section>
+
+<section>
+    <h3>亓</h3>
+    <p>還在</p>
+    <pre><code>$Coding~ing_ding-ding</code></pre>
+</section>
 
 
-    <section>
-       
-        <h3>亓</h3>
-        <p>還在</p>
-        <pre><code>$Coding~ing_ding-ding</code></pre>
-
-    </section>
 </div>

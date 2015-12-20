@@ -7,8 +7,8 @@ title: Article
   {% for post in site.posts %}
   {% if post.low == 'low' %}
     <li>
-      <a href="{% if post.title %} {{ site.baseurl}}{{ post.url }} {% endif %}">
-         <img src="{{ post.image }}" /> 
+      <a href="{% if post.title %} {{ site.baseurl }}{{ post.url }} {% endif %}">
+         <img src="{{ post.image }}" />
         <h3>{{ post.title }}</h3>
         <p>{{ post.title_real }}</p>
       </a>
@@ -19,7 +19,6 @@ title: Article
 
 <section class="content">
   <h2>Commencement</h2>
- 
+
   <p>Life is hehely JOKING.</p>
 </section>
- 

@@ -1,0 +1,4 @@
+install ruby with gems
+gem install bundle
+bundle install
+bundle exec jekyll serve

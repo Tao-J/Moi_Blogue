@@ -22,9 +22,17 @@ const IndexPage = () => {
           <span>Section:</span>
           <ul>
             <li>
-              <a href="http://tao-j.me" className="button">
-                About
-              </a>
+              <li>
+                <a className="button">Article</a>
+              </li>
+              <li>
+                <a className="button">Portefeuille</a>
+              </li>
+              <li>
+                <a href="http://tao-j.me" className="button">
+                  About
+                </a>
+              </li>
             </li>
           </ul>
         </div>

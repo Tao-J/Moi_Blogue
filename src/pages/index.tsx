@@ -1,42 +1,11 @@
 import * as React from "react";
 import { graphql } from "gatsby";
 
-import Head from "../component/head";
-import Footer from "../component/footer";
+import DefaultLayout from "../components/layouts";
 
 const IndexPage = ({ data }) => {
   return (
-    <main>
-      <Head />
-      <header>
-        <h1>Moi Blogue</h1>
-        <p>Blaying around</p>
-      </header>
-      <div id="banner">
-        <span id="logo"></span>
-
-        <a href="/" className="button fork">
-          <strong>Home</strong>
-        </a>
-
-        <div className="downloads">
-          <span>Section:</span>
-          <ul>
-            <li>
-              <a className="button">Article</a>
-            </li>
-            <li>
-              <a className="button">Portefeuille</a>
-            </li>
-            <li>
-              <a href="http://tao-j.me" className="button">
-                About
-              </a>
-            </li>
-          </ul>
-        </div>
-      </div>
-
+    <DefaultLayout>
       <div className="wrapper">
         <section>
           <h2>Frontmatter</h2>
@@ -58,8 +27,7 @@ const IndexPage = ({ data }) => {
           </div>
         </section>
       </div>
-      <Footer />
-    </main>
+    </DefaultLayout>
   );
 };
 

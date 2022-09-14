@@ -1,5 +1,5 @@
 import * as React from "react";
-import { graphql } from "gatsby";
+import { graphql, Link } from "gatsby";
 
 import DefaultLayout from "../components/layouts";
 
@@ -16,10 +16,10 @@ const IndexPage = ({ data }) => {
                 if (fm.low != "low")
                   return (
                     <li key={edge.node.id}>
-                      <a href="">
+                      <Link to={edge.node.parent.name}>
                         <h3>{fm.title}</h3>
                         <p>{fm.title_real}</p>
-                      </a>
+                      </Link>
                     </li>
                   );
               })}
@@ -43,6 +43,11 @@ export const query = graphql`
             title_real
             low
             layout
+          }
+          parent {
+            ... on File {
+              name
+            }
           }
         }
       }

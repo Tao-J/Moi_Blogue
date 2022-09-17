@@ -3,16 +3,15 @@ layout: post
 title: Chisel中文教程-入门
 title_real: Hands on guide for using Chisel (Constructing Hardware in a Scala Embedded Language).
 ---
-## Chisel中文教程-入门
-###准备软件
+## 准备软件
 正确安装并配置jdk。环境变量PATH里需保证jdk的java得比系统自带的java优先级高。
 下载安装[sbt](www.scala-sbt.org)。
 一般的文本编辑器编辑Scala代码也未尝不可，不过建议用[IntelliJ IDEA](www.jetbrains.com/idea/)，提升效率。
 如需使用Chisel的C++仿真功能，安装gcc/g++。Windows下建议用[Cygwin](www.cygwin.com)。
 同时Chisel仿真时可生成波形，用[gtkwave](gtkwave.sourceforge.net)可以查看。
 
-###Chisel工作流
-####建立工程文件夹
+## Chisel工作流
+### 建立工程文件夹
 整个demo工程文件夹所有文件如下所示。本指南会按顺序提供每个文件的内容，没有提到的文件可暂时不创建。
 
 ```
@@ -27,7 +26,7 @@ demo/
             └── Alu.scala
 ```
 
-文件内容
+#### 文件内容
 `build.sbt`：注意其中每两行之间都有一空行。
 
 ```
@@ -50,7 +49,7 @@ libraryDependencies ++= ( if (chiselVersion_h != "None" ) ("edu.berkeley.cs" %% 
 sbt.version=0.13.6
 ```
 
-####编写硬件描述代码
+#### 编写硬件描述代码
 `Alu.scala`
 
 ```scala
@@ -95,7 +94,8 @@ object Alu {
 `cd`到工程的根文件夹下（即和`build.sbt`平行）。然后在命令行中执行`sbt run`来编译代码。
 第一次运行编译时会自动下载Chisel以及相关依赖包，具体时间取决于网络质量。成功运行一次后将直接从本地调用。
 如果编译通过的话可以用`sbt "run --backend v"`生成Verilog，不过没测试过的代码直接下板调试似乎不太合适。
-####编写测试代码
+
+### 编写测试代码
 `Alu.scala`：补全`class AluTests(c: Alu) extends Tester(c)`里的测试代码。
 
 ```scala
@@ -150,7 +150,7 @@ sbt "run --backend c --compile --genHarness --test"
 可以通过"Write Save File"来保存当前工作环境，这样下次就不用一个个手动添加信号线了。
 ”Reload Waveform“可以在vcd文件更新后重新载入，十分方便。
 
-####结束
+### 结束
 生成Verilog代码，进入传统工作流下板验证。
 
 ```
@@ -167,7 +167,7 @@ sbt "run --backend v"
 + 执行Verilog仿真（小于1M Cycle建议采用Chisel仿真）
 + 下板验证
 
-###和直接使用Verilog的一些对比
+## 和直接使用Verilog的一些对比
 `alu.v`
 
 ```verilog
@@ -203,7 +203,7 @@ endmodule
 首先Alu应该是一个组合逻辑。上面Verilog代码为了使用case不得不写了always模块，并且声明了out为寄存器变量，综合出来的结果中会有寄存器，但是按照常理来说不应该有寄存器。当然Verilog里面使用三目运算符也能达到全组合逻辑的效果，不过写起来十分麻烦罢了。
 
 
-####使用Chisel的优点
+### 使用Chisel的优点
 
 + 写测试代码十分方便，强调先测试仿真通过了再下板。Verilog的test bench太繁琐。
 + 编辑代码可以使用IDE，效率大大提高。
@@ -216,7 +216,7 @@ endmodule
 
 （实例待添加）
 
-####附：自动侦测修改并编译
+## 附：自动侦测修改并编译
 若输入时不用`sbt "run --test"`而用`sbt "~run --test"`的话，每次完成后sbt不会退出，而会等待源码修改，帧测到修改后自动编译。
 由于输入命令较多，这里提供一个脚本，每次就不用重复输入命令了。
 `run.sh`

@@ -53,6 +53,17 @@ const config: GatsbyConfig = {
               linkImagesToOriginal: false,
             },
           },
+          {
+            resolve: `gatsby-remark-prismjs`,
+            options: {
+              classPrefix: "language-",
+              inlineCodeMarker: null,
+              aliases: { make: "makefile" },
+              showLineNumbers: false,
+              noInlineHighlight: false,
+              escapeEntities: {},
+            },
+          },
         ],
       },
     },

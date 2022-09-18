@@ -2,6 +2,7 @@ import React from "react";
 
 import Head from "./head";
 import Footer from "./footer";
+import { Link } from "gatsby";
 
 const DefaultLayout = ({ children }) => {
   return (
@@ -15,9 +16,9 @@ const DefaultLayout = ({ children }) => {
         <div id="banner">
           <span id="logo"></span>
 
-          <a href="/" className="button fork">
+          <Link to="/" className="button fork">
             <strong>Home</strong>
-          </a>
+          </Link>
 
           <div className="downloads">
             <span>Section:</span>

@@ -1,10 +1,11 @@
 ---
 layout: post
 title: L’Étranger
-title_real: 《局外人》隨記 (English version pending)
+title_real: 《局外人》冷漠叙述语调引发的遐想
+lang: cn
+series: 
+    - essay
 ---
-《局外人》冷漠叙述语调引发的遐想
-====
 *Font: Text: PMingLiu, Quote: FangSong*
 
 《局外人》开篇的叙述缺乏波澜，奠定了冷漠平淡的基调。而这同样也是叙述者穆尔索看待世界的方式。面对母亲去世，他反应平静，与读者的期望大相迳庭，甚至让人怀疑叙述者是否在刻意压制情感。然而随着叙述的深入，我们发现叙述者始终是用冷漠的态度去面对发生的一切。这在不经意间抛出一个疑问：他为何对于世界如此冷漠？  

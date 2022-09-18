@@ -1,7 +1,10 @@
 ---
 layout: post
-title: Chisel中文教程-入门
-title_real: Hands on guide for using Chisel (Constructing Hardware in a Scala Embedded Language).
+title: Hands on guide for using Chisel.
+title_real: Chisel中文教程-入门
+lang: cn
+series:
+  - riscv
 ---
 ## 准备软件
 正确安装并配置jdk。环境变量PATH里需保证jdk的java得比系统自带的java优先级高。

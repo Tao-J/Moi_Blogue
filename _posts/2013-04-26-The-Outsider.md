@@ -1,10 +1,10 @@
 ---
 layout: post
-title: L’Étranger
-title_real: 《局外人》冷漠叙述语调引发的遐想
+title_en: L’Étranger
+title_cn: 《局外人》冷漠叙述语调引发的遐想
 lang: cn
-series: 
-    - essay
+series:
+  - essay
 ---
 *Font: Text: PMingLiu, Quote: FangSong*
 

@@ -1,5 +1,5 @@
 import * as React from "react";
-import { graphql, Link } from "gatsby";
+import { Link } from "gatsby";
 
 const PostsList = ({ data, series }) => {
   return (
@@ -15,8 +15,8 @@ const PostsList = ({ data, series }) => {
                   <li key={edge.node.id}>
                     <Link to={edge.node.parent.name}>
                       {/* {fm.lang} */}
-                      <h3>{fm.title}</h3>
-                      <p>{fm.title_real}</p>
+                      <h3>{fm.title_en}</h3>
+                      <p>{fm.title_cn}</p>
                     </Link>
                   </li>
                 );

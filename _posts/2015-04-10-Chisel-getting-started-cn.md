@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Hands on guide for using Chisel.
-title_real: Chisel中文教程-入门
+title_en: Hands on guide for using Chisel.
+title_cn: Chisel中文教程-入门
 lang: cn
 series:
   - riscv

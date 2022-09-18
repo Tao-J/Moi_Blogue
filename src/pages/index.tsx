@@ -34,8 +34,8 @@ export const query = graphql`
         node {
           id
           frontmatter {
-            title
-            title_real
+            title_en
+            title_cn
             layout
             series
             lang

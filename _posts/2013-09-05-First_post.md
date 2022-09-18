@@ -1,7 +1,7 @@
 ---
 layout: post
-title: I am born - first post
-title_real: 你好世界
+title_en: I am born - first post
+title_cn: 你好世界
 lang: en
 series:
   - essay

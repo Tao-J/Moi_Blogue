@@ -5,12 +5,14 @@ import DefaultLayout from "./layouts";
 
 export default function PostPage({ data }) {
   const post = data.markdownRemark;
+  const fm = post.frontmatter;
+  let title = fm.lang == "en" ? fm.title_en : fm.title_cn;
   return (
     <DefaultLayout>
       <main>
         <div className="wrapper">
           <section>
-            <h1>{post.frontmatter.title}</h1>
+            <h1>{title}</h1>
             <div dangerouslySetInnerHTML={{ __html: post.html }} />
           </section>
         </div>
@@ -25,7 +27,9 @@ export const query = graphql`
       id
       html
       frontmatter {
-        title
+        title_en
+        title_cn
+        lang
       }
     }
   }

@@ -1,7 +1,7 @@
 import * as React from "react";
 import { graphql, Link } from "gatsby";
 
-import DefaultLayout from "../components/layouts";
+import DefaultLayout from "../layouts";
 import PostsList from "../components/posts_list";
 
 const displaySeries = [
@@ -27,7 +27,7 @@ export const query = graphql`
   query md {
     posts: allMarkdownRemark(
       limit: 2000
-      sort: { order: DESC, fields: [fileAbsolutePath] }
+      sort: { fileAbsolutePath: DESC }
       filter: { frontmatter: { layout: { eq: "post" } } }
     ) {
       edges {

@@ -7,7 +7,7 @@ export const createPages = async ({ graphql, actions, reporter }) => {
     query {
       posts: allMarkdownRemark(
         limit: 2000
-        sort: { order: DESC, fields: [fileAbsolutePath] }
+        sort: { fileAbsolutePath: DESC }
         filter: { frontmatter: { layout: { eq: "post" } } }
       ) {
         edges {

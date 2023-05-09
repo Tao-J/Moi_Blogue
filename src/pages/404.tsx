@@ -1,6 +1,6 @@
 import * as React from "react";
 
-import DefaultLayout from "../components/layouts";
+import DefaultLayout from "../layouts";
 
 const NotFoundPage = () => {
   return (
@@ -9,7 +9,7 @@ const NotFoundPage = () => {
         <div className="wrapper">
           <section>
             <h1>404</h1>
-            <p>Nothing here</p>
+            <p>This model has not been not built yet.</p>
           </section>
         </div>
       </main>

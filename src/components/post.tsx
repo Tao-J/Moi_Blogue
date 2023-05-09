@@ -1,7 +1,7 @@
 import { graphql } from "gatsby";
 import * as React from "react";
 
-import DefaultLayout from "./layouts";
+import DefaultLayout from "../layouts";
 
 export default function PostPage({ data }) {
   const post = data.markdownRemark;

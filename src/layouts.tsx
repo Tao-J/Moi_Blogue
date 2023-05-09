@@ -1,7 +1,7 @@
 import React from "react";
 
-import Head from "./head";
-import Footer from "./footer";
+import Head from "./components/head";
+import Footer from "./components/footer";
 import { Link } from "gatsby";
 
 const DefaultLayout = ({ children }) => {
@@ -10,8 +10,8 @@ const DefaultLayout = ({ children }) => {
       <Head />
       <main>
         <header>
-          <h1>Moi Blogue</h1>
-          <p>Blaying around</p>
+          <h1>Model Me, Model World</h1>
+          <p>Blayground</p>
         </header>
         <div id="banner">
           <span id="logo"></span>

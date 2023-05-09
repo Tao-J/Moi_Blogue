@@ -1,9 +1,10 @@
 import type { GatsbyConfig } from "gatsby";
+
 const config: GatsbyConfig = {
   siteMetadata: {
-    title: `Moi Blogue`,
-    siteUrl: `https://blay.tao-j.me`,
-    description: `Blaying around`,
+    title: `MMMW`,
+    siteUrl: `https://mmmw.pij.xyz`,
+    description: `Model Me, Model World`,
   },
   plugins: [
     `gatsby-plugin-image`,

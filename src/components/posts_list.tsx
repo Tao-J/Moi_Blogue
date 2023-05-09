@@ -8,7 +8,7 @@ const PostsList = ({ data, series }) => {
         <h2>{series[1]}</h2>
         <div className="wrapper">
           <ul className="entries">
-            {data.posts.edges.map((edge, i) => {
+            {data.posts.edges.map((edge, _) => {
               let fm = edge.node.frontmatter;
               if (fm.series.includes(series[0]))
                 return (
